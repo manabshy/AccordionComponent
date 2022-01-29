@@ -1,14 +1,14 @@
-import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css']
+  styleUrls: ['./accordion.component.scss']
 })
-export class AccordionComponent implements OnInit {
+export class AccordionComponent {
 
   @Input() active = false;
-  @Input() background = 'wes-bg-solid-white';
+  @Input() background = '-bg-solid-white';
   @Input() idAttribute: string = 'frequentlyAskedQuestions';
   @Input() title: string = 'Frequently Asked Questions';
   items: Array<any>;
@@ -42,21 +42,23 @@ export class AccordionComponent implements OnInit {
    ]
 
    }
-
-  ngOnInit(): void {
-  }
   toggleMenu(event: Event) {
     const toggleIcon = (event.currentTarget as HTMLElement).parentElement;
     const toggleDiv = toggleIcon?.querySelector('.toggle-content');
     const svgIcon = toggleIcon?.querySelector('.svg-rotate__icon');
+    const fieldHeading = toggleIcon?.querySelector('.field-heading');
     if (!toggleIcon?.classList.contains('active')) {
       toggleIcon?.classList.add('active');
+      fieldHeading?.classList.add('active');
+
       svgIcon?.classList.add('cross');
       toggleDiv?.classList.remove('hidden');
     } else {
       toggleIcon.classList.remove('active');
       toggleDiv?.classList.add('hidden');
       svgIcon?.classList.remove('cross');
+      fieldHeading?.classList.remove('active');
+
 
     }
   }

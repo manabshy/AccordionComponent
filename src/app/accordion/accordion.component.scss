@@ -1,0 +1,56 @@
+.component.container {
+  .component-content {
+    .hidden {
+      display: none;
+    }
+
+    ul.items {
+      list-style: none;
+    }
+
+    .field-heading {
+      
+      display: flex;
+      padding: 15px;
+
+      svg.svg-rotate__icon.cross {
+        transform: rotate(-495deg);
+      }
+
+      > span:nth-child(2) {
+        width: 85%;
+        margin: auto;
+      }
+      > span:nth-child(1) {
+        font-size: 2rem;
+        font-weight: 800;
+        padding: 1px;
+        font-family: oswaldBold;
+      }
+      > span:last-child {
+        background-color: yellow;
+      }
+    }
+
+    .field-heading.active {
+      background-color: darkgray;
+    }
+
+    .field-content > p {
+      box-sizing: inherit;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-family: oswaldRegular;
+    }
+
+    h1.app-accordion-header {
+      margin-left: 40px;
+      border-bottom: 20px solid black;
+      padding: 15px;
+    }
+
+    .component.content {
+      border-bottom: 2px solid black;
+    }
+  }
+}
