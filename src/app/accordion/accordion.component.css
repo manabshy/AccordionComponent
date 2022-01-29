@@ -1,5 +1,49 @@
 
-  .hidden {
-    display: none;
-  }
+.hidden {
+  display: none;
+}
 
+ul {
+  list-style: none;
+}
+svg.svg-rotate__icon {
+  background-color: yellow;
+  float: right;
+  position: relative;
+  left: 395px;
+}
+svg.svg-rotate__icon.cross {
+  transform: rotate(-495deg);
+}
+
+.field-heading {
+  display: flex;
+  gap: 1em;
+  background-color: darkgray;
+  padding: 15px;
+}
+
+.field-heading > span:nth-child(2) {
+  width: 45%;
+  padding: 10px;
+}
+.field-heading > span:nth-child(1) {
+  font-size: large;
+  font-weight: 800;
+  padding: 10px;
+  font-family: oswaldBold;
+}
+
+.field-heading > span {
+  vertical-align: middle;
+}
+
+.field-content > p {
+  box-sizing: inherit;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: oswaldRegular;
+}

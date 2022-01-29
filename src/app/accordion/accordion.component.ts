@@ -48,12 +48,16 @@ export class AccordionComponent implements OnInit {
   toggleMenu(event: Event) {
     const toggleIcon = (event.currentTarget as HTMLElement).parentElement;
     const toggleDiv = toggleIcon?.querySelector('.toggle-content');
+    const svgIcon = toggleIcon?.querySelector('.svg-rotate__icon');
     if (!toggleIcon?.classList.contains('active')) {
       toggleIcon?.classList.add('active');
+      svgIcon?.classList.add('cross');
       toggleDiv?.classList.remove('hidden');
     } else {
       toggleIcon.classList.remove('active');
       toggleDiv?.classList.add('hidden');
+      svgIcon?.classList.remove('cross');
+
     }
   }
 }
