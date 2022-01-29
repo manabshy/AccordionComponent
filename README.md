@@ -1,4 +1,5 @@
 # Myaccord
+<img width="1172" alt="Screenshot 2022-01-29 at 19 55 19" src="https://user-images.githubusercontent.com/1440221/151675772-c3050cae-371a-4e6c-bcc0-8908d649932c.png">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
